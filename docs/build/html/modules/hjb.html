@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hjb &#8212; Institute of Numerical Mathematics Code Documentation 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modules/hjb';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="hjb.hjb_solver" href="generated/hjb.hjb_solver.html" />
+    <link rel="prev" title="Institute of Numerical Mathematics Code Documentation" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Institute of Numerical Mathematics Code Documentation 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    hjb
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../devs/guidelines.html">
+    Documentation Guidelines
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    hjb
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../devs/guidelines.html">
+    Documentation Guidelines
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="generated/hjb.hjb_solver.html">hjb.hjb_solver</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="generated/hjb.brute.html">hjb.brute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/hjb.brute_all.html">hjb.brute_all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/hjb.scalar.html">hjb.scalar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/hjb.optim_user_func.html">hjb.optim_user_func</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="generated/hjb.HjbProblem.html">hjb.HjbProblem</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbProblem.check_input_and_discretize.html">hjb.HjbProblem.check_input_and_discretize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbProblem.check_inputs.html">hjb.HjbProblem.check_inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbProblem.discretize.html">hjb.HjbProblem.discretize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbProblem.get_non_bcs_ind.html">hjb.HjbProblem.get_non_bcs_ind</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/hjb.Solver.html">hjb.Solver</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="generated/hjb.HjbOperator.html">hjb.HjbOperator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbOperator.construct_matrix.html">hjb.HjbOperator.construct_matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbOperator.get_diagonals.html">hjb.HjbOperator.get_diagonals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbOperator.get_unraveld_diagonals.html">hjb.HjbOperator.get_unraveld_diagonals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/generated/hjb.HjbOperator.shape_diagonals.html">hjb.HjbOperator.shape_diagonals</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hjb">
+<span id="module-hjb"></span><h1><a class="reference internal" href="#module-hjb" title="hjb"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hjb</span></code></a><a class="headerlink" href="#hjb" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>The aim of this module is to solve a Hamilton-Jacobi-Bellman equation (HJB) of
+order one or two in one and two dimensions. For this we have to make the assumption
+that the HJB is of the following form</p>
+<div class="math notranslate nohighlight" id="equation-eq-hjb-min">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-hjb-min" title="Link to this equation">#</a></span>\[-u_t(t,x) + \min_{q \in \mathcal{Q}} \left\{ L^{q} u(t,x) - f(t,x,q) \right\} = 0\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight" id="equation-eq-hjb-max">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-hjb-max" title="Link to this equation">#</a></span>\[-u_t(t,x) + \max_{q \in \mathcal{Q}} \left\{ L^{q} u(t,x) - f(t,x,q) \right\} = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(L^{q}\)</span> is the operator for the space discretization.
+Wich is defined as</p>
+<div class="math notranslate nohighlight">
+\[L^q := -\text{Tr } a(t,x,q) D^2 u(t,x) - b (t,x,q) \cdot D u(t,x).\]</div>
+<p>with <span class="math notranslate nohighlight">\(a \in \mathbb{R}^{d \times d}\)</span> a diagonal matrix and <span class="math notranslate nohighlight">\(b \in
+\mathbb{R}^d\)</span> whereby <span class="math notranslate nohighlight">\(d\)</span> is the number of spatial dimensions. This operator
+is discretzised with the <em>Kushner-Dupuis</em> scheme.
+For the time discretization we use the <em>theta</em> method such that</p>
+<div class="math notranslate nohighlight">
+\[-\Delta_t^+ u_h (t_k, x_i) + \max_{q \in \mathcal{Q}}
+\left[ \theta (L_h^q u_h (t_k, x_i)) + (1 - \theta) (L_h^q u_h (t_{k+1}, x_i))
+-f(t_k, x_i, q)\right] = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta \in [0,1]\)</span>. If <span class="math notranslate nohighlight">\(\theta &gt; 0\)</span> we have to solve a non linear
+system of equations in every time step. For the following <span class="math notranslate nohighlight">\(\theta\)</span> values
+we get the well known different methods for solving the coupled ode system from
+the discretization</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta = 0\)</span> explicit Euler</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = 0.5\)</span> Crank-Nicolson method</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = 1\)</span> implicit Euler</p></li>
+</ul>
+</div></blockquote>
+<p>We also make the assumption that we solve the HJB backwards in time wich is a
+common thing to do.</p>
+<p>Since the requirements for a classical solution, i. g. <span class="math notranslate nohighlight">\(u \in C^2\)</span> are quite
+strong we are using the framework of <em>viscosity solutions</em> to solve the HJB in a weak
+sense. More on viscosity solutions can be found in <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+<p class="rubric">References</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Michael G. Crandall und Pierre-Louis Lions. „Viscosity Solutions of Hamilton-
+Jacobi Equations“. In: Transactions of the American Mathematical Society
+277.1 (1983), S. 1–42. ISSN: 00029947. URL: <a class="reference external" href="http://www.jstor.org/stable/1999343">http://www.jstor.org/stable/1999343</a>.</p>
+</aside>
+</aside>
+</section>
+<section id="general-hints">
+<h2>General Hints<a class="headerlink" href="#general-hints" title="Link to this heading">#</a></h2>
+<p>This module is written such that the user doesn’t have to think about what is
+happening behind the scenes. Instead the user only has to provide the terms in
+front of the derivatives (i. g. the matrix <span class="math notranslate nohighlight">\(a\)</span> and the vector <span class="math notranslate nohighlight">\(b\)</span>)
+and the volume force <span class="math notranslate nohighlight">\(f\)</span>. Since <span class="math notranslate nohighlight">\(a\)</span> is a diagonal matrix we don’t
+consider cross terms in the derivatives and equation <a class="reference internal" href="#equation-eq-hjb-min">(1)</a>
+simplifies in the two dimensional second order case to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-u_t(t,x) + \min_{q \in \mathcal{Q}} \{ &amp;-a_{11}(t,x,q) u_{xx}(t,x)
+- a_{22}(t,x,q) u_{yy}(t,x) \\
+&amp;- b_1(t,x,q) u_x(t,x) - b_2(t,x,q) u_y(t,x)
+- f(t,x,q) \} = 0.\end{split}\]</div>
+<p>The other cases for the order and dimensions as well as the <span class="math notranslate nohighlight">\(\max\)</span> case in
+equation <a class="reference internal" href="#equation-eq-hjb-max">(2)</a> are analougus.</p>
+<p>For this the module is build such that the user has to specify the following functions
+<code class="docutils literal notranslate"><span class="pre">dx</span></code>, <code class="docutils literal notranslate"><span class="pre">ddx</span></code>, <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">u_0</span></code> and <code class="docutils literal notranslate"><span class="pre">u_D</span></code>. Where the functions are</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dx</span></code> terms in front of the first derivative (<span class="math notranslate nohighlight">\(b\)</span> vector)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ddx</span></code> terms in fron of the second derivative (<span class="math notranslate nohighlight">\(a\)</span> matrix)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> volume force</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">u_0</span></code> initial conditions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">u_D</span></code> dirichlet boundary conditions</p></li>
+</ul>
+</div></blockquote>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">dx</span></code>, <code class="docutils literal notranslate"><span class="pre">ddx</span></code> and <code class="docutils literal notranslate"><span class="pre">f</span></code> have the signature
+<code class="docutils literal notranslate"><span class="pre">(t,</span> <span class="pre">x,</span> <span class="pre">q,</span> <span class="pre">problem)</span></code> and the functions <code class="docutils literal notranslate"><span class="pre">u_0</span></code> and <code class="docutils literal notranslate"><span class="pre">u_D</span></code> the signature
+<code class="docutils literal notranslate"><span class="pre">(t,</span> <span class="pre">x,</span> <span class="pre">problem)</span></code>. Whereas the signature parameters are defined as</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> : <code class="docutils literal notranslate"><span class="pre">float</span></code> current time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> : <code class="docutils literal notranslate"><span class="pre">List[numpy.ndarray]</span></code> space discretization points</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> : <code class="docutils literal notranslate"><span class="pre">float</span></code> control value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">problem</span></code> : <a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem" title="hjb.HjbProblem"><code class="xref py py-class docutils literal notranslate"><span class="pre">HjbProblem</span></code></a> HjbProblem class.</p></li>
+</ul>
+</div></blockquote>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">u_0</span></code> have to return a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> of the appropriate
+size of the problem.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">dx</span></code>, <code class="docutils literal notranslate"><span class="pre">ddx</span></code> the return type has to be a <code class="docutils literal notranslate"><span class="pre">List[numpy.ndarray]</span></code> of the
+appropriate sice where the first entry in the list is for the first spatial dimension
+and the second entry for the second spatial dimension if needed.</p>
+<p>The boundary conditions have to have a different return type for the one dimensional
+and two dimensional case. In the one dimensional case the return type has to be
+<code class="docutils literal notranslate"><span class="pre">List[float]</span></code> with two entrys. The first entry is the value on the left boundary
+point and the second entry is the value on the right boundary point.</p>
+<p>In the two dimensional case the return type has to be <code class="docutils literal notranslate"><span class="pre">List[numpy.ndarray]</span></code> with
+four entrys. The entrys are in the following order according to their position on
+the rectangular domain. First entry <strong>top</strong>, second entry <strong>right</strong>, third entry <strong>bottom</strong> and
+fourth entry <strong>left</strong> boundary condition.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The term <em>appropriate size</em> is till now vague. If you aren’t using the
+<a class="reference internal" href="generated/hjb.scalar.html#hjb.scalar" title="hjb.scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar</span></code></a> optimization routine then the size is the size of the discretized
+problem. If the Problem is one dimensional than return size is
+<span class="math notranslate nohighlight">\(\mathbb{R}^{n_x}\)</span> and in the two dimensional case <span class="math notranslate nohighlight">\(\mathbb{R}^{n_x \times n_y}\)</span>.</p>
+<p>Since the <a class="reference internal" href="generated/hjb.scalar.html#hjb.scalar" title="hjb.scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar</span></code></a> optimization routine calculates the optimal control on
+each discretization point the return size has to be of the problem size for the
+discretization and one for the optimizer. This is a little bit ugly but you can
+make sure that you are giving back the appropriate size if your return size is of size
+<code class="docutils literal notranslate"><span class="pre">np.shape(x[0])</span></code> or <code class="docutils literal notranslate"><span class="pre">np.shape(x[1])</span></code> since they are the same sice.</p>
+</div>
+<p class="rubric">Examples</p>
+<p>To understand the principle of this module we consider three examples step by step
+with different complexity. All of the examples can be found in the example folder.</p>
+<section id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Link to this heading">#</a></h3>
+<p>The first example we are looking at is a one dimensional HJB of order one. The HJB
+reads as follow</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-u_t + |u_x| &amp;= 1 \qquad \text{on } (-1,1) \times (0,1) \\
+u &amp;= 0 \qquad \text{on } \{-1,1\} \times (0,1) \cup (-1,1) \times \{1\},\end{split}\]</div>
+<p>wich can be equivalent reformulated as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-u_t + \max_{q \in \{-1,1\}} \{q \cdot u_x - 1\} &amp;= 0 \qquad \text{on } (-1,1) \times (0,1)\\
+u &amp;= 0 \qquad \text{on } \{-1,1\} \times (0,1) \cup (-1,1) \times \{1\},\end{split}\]</div>
+<p>with unique viscosity solution</p>
+<div class="math notranslate nohighlight">
+\[u(t,x) = \min(1 - |x|, t).\]</div>
+<p>First we have to initialise the <a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem" title="hjb.HjbProblem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem</span></code></a> class and set the parameters
+for the space and time discretization</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hjb_problem</span> <span class="kn">import</span> <span class="n">HjbProblem</span>
+<span class="kn">from</span> <span class="nn">hjb_solver</span> <span class="kn">import</span> <span class="n">solve_hjb</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># initialise problem class</span>
+<span class="n">problem</span> <span class="o">=</span> <span class="n">HjbProblem</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="s2">&quot;brute_all&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># bound on the 1d domain and number of discretization points</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">x_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">x_max</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_x</span> <span class="o">=</span> <span class="mi">201</span>
+
+<span class="c1"># end time and number of points in the time discretization</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_t</span> <span class="o">=</span> <span class="mi">101</span>
+</pre></div>
+</div>
+<p>Since our control is bounded and we use the <a class="reference internal" href="generated/hjb.brute_all.html#hjb.brute_all" title="hjb.brute_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute_all</span></code></a> optimization procedure
+we have to specify the bounds on our control and the number of discretization points
+for the control</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># bounds on the control and discretization points</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">q_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">q_max</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_q</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Our volume force <code class="docutils literal notranslate"><span class="pre">f</span></code> is constant <span class="math notranslate nohighlight">\(1\)</span> and our initial conditions <code class="docutils literal notranslate"><span class="pre">u_0</span></code> are <span class="math notranslate nohighlight">\(0\)</span> we
+can define them e. g. with a <em>lambda</em> function</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># volume force</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="c1"># this would also be possible if you aren&#39;t using the scalar optimization routine</span>
+<span class="c1"># problem.f = lambda t, x, q, problem: np.ones(problem.n_x)</span>
+
+<span class="c1"># same for the initial conditions</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">u_0</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="c1"># problem.u_0 = lambda t, x, problem: np.zeros(problem.n_x)</span>
+</pre></div>
+</div>
+<p>The term infront of the first derivative is constant <span class="math notranslate nohighlight">\(q\)</span> so one
+possible realisation of <code class="docutils literal notranslate"><span class="pre">dx</span></code> reads</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dx</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">q</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="n">HjbProblem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+    <span class="n">dx_val</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dx_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">q</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+
+    <span class="k">return</span> <span class="n">dx_val</span>
+
+<span class="c1"># after defining the function the problem class needs this function as attribute</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span>
+</pre></div>
+</div>
+<p>and the dirichlet boundary conditions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">problem</span><span class="o">.</span><span class="n">u_D</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Finally to solve the problem at hand we have to check the inputs, discretize and
+call the solver</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># input check and discretisation</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">check_input_and_discretize</span><span class="p">()</span>
+
+<span class="c1"># solve the HJB with the howard algorithm</span>
+<span class="n">solve_hjb</span><span class="p">(</span><span class="n">problem</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The solution of the problem and the optimal control values can be found in the
+<code class="docutils literal notranslate"><span class="pre">problem.sol</span></code>, <code class="docutils literal notranslate"><span class="pre">problem.q_opt</span></code> attributes.</p>
+</section>
+<section id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Link to this heading">#</a></h3>
+<p>For this example we are looking at the two dimensional version of <span class="xref std std-ref">Example 1</span>.
+The equation to solve then reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-u_t + |\nabla \cdot u| &amp;= 1 \qquad \text{on } (-1,1) \times (0,1) \\
+u &amp;= 0 \qquad \text{on } \{-1,1\} \times (0,1) \cup (-1,1) \times \{1\},\end{split}\]</div>
+<p>Wich again can be reformulated to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-u_t + \max_{q \in \{-1,1\}} \{q \nabla u - 1\} &amp;= 0 \qquad \text{on } (-1,1) \times (0,1)\\
+u &amp;= 0 \qquad \text{on } \{-1,1\} \times (0,1) \cup (-1,1) \times \{1\},\end{split}\]</div>
+<p>The whole code this time with the <a class="reference internal" href="generated/hjb.brute.html#hjb.brute" title="hjb.brute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute</span></code></a> optimization routine could look
+something like this</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hjb_problem</span> <span class="kn">import</span> <span class="n">HjbProblem</span>
+<span class="kn">from</span> <span class="nn">hjb_solver</span> <span class="kn">import</span> <span class="n">solve_hjb</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># user defined functions for dx and u_D</span>
+<span class="k">def</span> <span class="nf">dx</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="n">dxv</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dxv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">q</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+    <span class="n">dxv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">q</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])))</span>
+
+    <span class="k">return</span> <span class="n">dxv</span>
+
+<span class="k">def</span> <span class="nf">u_D</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="n">u_D</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">problem</span><span class="o">.</span><span class="n">n_x</span><span class="p">))</span>
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">problem</span><span class="o">.</span><span class="n">n_y</span><span class="p">))</span>
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">problem</span><span class="o">.</span><span class="n">n_x</span><span class="p">))</span>
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">problem</span><span class="o">.</span><span class="n">n_y</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">u_D</span>
+
+<span class="c1"># initialise solver class</span>
+<span class="n">problem</span> <span class="o">=</span> <span class="n">HjbProblem</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="s2">&quot;brute&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># x discretization</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">x_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">x_max</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_x</span> <span class="o">=</span> <span class="mi">201</span>
+
+<span class="c1"># y discretization</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">y_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">y_max</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_y</span> <span class="o">=</span> <span class="mi">201</span>
+
+<span class="c1"># end time and time discretization</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_t</span> <span class="o">=</span> <span class="mi">101</span>
+
+<span class="c1"># control discretization</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">q_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">q_max</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_q</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># volume force and initial conditions</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">u_0</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="c1"># check inputs, discretize and solve the problem</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">check_inputs_and_discretize</span><span class="p">()</span>
+<span class="n">solve_hjb</span><span class="p">(</span><span class="n">problem</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-3">
+<h3>Example 3<a class="headerlink" href="#example-3" title="Link to this heading">#</a></h3>
+<p>In this example we look at the HJB from <a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> wich arises from the modeling of the
+trading on the intraday electricity market. This example is of dimension two and
+order two and more sophisticated than the academic examples till now. Beside a look
+at how a somewhat complicated HJB can be solved with this module we are using the
+<a class="reference internal" href="generated/hjb.optim_user_func.html#hjb.optim_user_func" title="hjb.optim_user_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optim_user_func</span></code></a> optimization routine to solve this problem.</p>
+<p>After the modeling process we have to solve the following HJB. Find
+<span class="math notranslate nohighlight">\(V : [0, T] \times \mathcal{U} \rightarrow \mathbb{R}\)</span>,
+<span class="math notranslate nohighlight">\(V = (t, y, z)\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;V_t + \mu_Y V_y + \frac{1}{2} \sigma_y V_{yy} + \frac{1}{2} \sigma_D V_{zz} \\
+&amp;+ \sup_{q(t) \in \mathcal{Q}} \{ -(y + \text{sign}(q(t)) h(t) + \varphi(t, q(t))) q(t)
++ q(t) V_z + \psi (q(t)) V_y \} = 0\end{split}\]</div>
+<p>for <span class="math notranslate nohighlight">\((t,y,z) \in [0,T) \times \mathcal{U}\)</span> with terminal conditions (initial
+conditions) <span class="math notranslate nohighlight">\(V(T, y, z) = g(T, y, z)\)</span> for all <span class="math notranslate nohighlight">\((y,z) \in \mathcal{U}\)</span>.</p>
+<p>As usual first we have to initialise the solver class and make the discretization</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hjb_problem</span> <span class="kn">import</span> <span class="n">HjbProblem</span>
+<span class="kn">from</span> <span class="nn">hjb_solver</span> <span class="kn">import</span> <span class="n">solve_hjb</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># intialize solver and discretization parameters</span>
+<span class="n">problem</span> <span class="o">=</span> <span class="n">HjbProblem</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;user_func&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">problem</span><span class="o">.</span><span class="n">x_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1600</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">x_max</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_x</span> <span class="o">=</span> <span class="mi">301</span>
+
+<span class="n">problem</span><span class="o">.</span><span class="n">y_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">y_max</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_y</span> <span class="o">=</span> <span class="mi">101</span>
+
+<span class="n">problem</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="mf">17.5</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">n_t</span> <span class="o">=</span> <span class="mi">101</span>
+</pre></div>
+</div>
+<p>This time we use some non default values for the howard algorithm</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">problem</span><span class="o">.</span><span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">tol_gmres</span> <span class="o">=</span> <span class="mf">1e-9</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">max_iter</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+<p>Now we define some problem constants. Since we define them here we can make use
+of them in the functions we have to specify</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">problem</span><span class="o">.</span><span class="n">h</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="mf">2.11e1</span> <span class="o">-</span> <span class="mf">7.46</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="mf">1.36</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">1.01e-1</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">3</span> \
+    <span class="o">-</span> <span class="mf">1.06e-3</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="mf">6.3e-4</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">5</span> <span class="o">-</span> <span class="mf">3.59e-5</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">6</span> <span class="o">+</span> <span class="mf">6.59e-7</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">7</span>
+
+<span class="n">problem</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="mf">8.72e-2</span> <span class="o">+</span> <span class="mf">1.67e-2</span> <span class="o">*</span> <span class="n">t</span> <span class="o">-</span> <span class="mf">5.28e-4</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+    <span class="o">-</span> <span class="mf">4.15e-4</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mf">5.012e-5</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">4</span> <span class="o">-</span> <span class="mf">1.95e-6</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">5</span> <span class="o">+</span> <span class="mf">2.36e-8</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">problem</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mf">0.0017</span>
+
+<span class="n">problem</span><span class="o">.</span><span class="n">phi</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">k</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="n">k</span> <span class="o">*</span> <span class="n">q</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">psi</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">b</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="n">b</span> <span class="o">*</span> <span class="n">q</span>
+
+<span class="n">problem</span><span class="o">.</span><span class="n">mu_y</span> <span class="o">=</span> <span class="mf">0.0433</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">sig_y</span> <span class="o">=</span> <span class="mf">1.06</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">siy_D</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>With this parameters we can state the terms in front of the derivatives and the
+volume force</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dx</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="n">dxv</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># V_z term</span>
+    <span class="n">dxv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">q</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+
+    <span class="c1"># gather b for readability and calculate V_y term</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">b</span>
+    <span class="n">psi</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">psi</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+    <span class="n">dxv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">problem</span><span class="o">.</span><span class="n">mu_y</span> <span class="o">+</span> <span class="n">psi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])))</span>
+
+    <span class="k">return</span> <span class="n">dxv</span>
+
+<span class="k">def</span> <span class="nf">ddx</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="n">ddxv</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># V_zz term</span>
+    <span class="n">ddz</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">problem</span><span class="o">.</span><span class="n">sig_D</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">ddxv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ddz</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+
+    <span class="c1"># V_yy term</span>
+    <span class="n">ddy</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">problem</span><span class="o">.</span><span class="n">sig_y</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">ddxv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ddy</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])))</span>
+
+    <span class="k">return</span> <span class="n">ddxv</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="c1"># gather the second spatial dimension for readability</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># evaluate the fitted polynomials and the phi function</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">phi</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">phi</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">h</span> <span class="o">+</span> <span class="n">phi</span><span class="p">)</span> <span class="o">*</span> <span class="n">q</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since the terminal values are a optimization problem on its own we load the
+precaulated values for performance</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">u_0</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;termval.npy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>As a workaround for the boundary conditions we use the initial conditions on the
+bound minus a factor</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">u_D</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="c1"># gather initial conditions</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;termval.npy&quot;</span><span class="p">)</span>
+
+    <span class="n">u_D</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">G</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">G</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">G</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">u_D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">G</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">u_D</span>
+</pre></div>
+</div>
+<p>Finally the last thing to define is the optimization routine. For this we note
+that the signature of the user defined optimization function is not the same as
+the others. The signature for <a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem.q_opt_user" title="hjb.HjbProblem.q_opt_user"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem.q_opt_user</span></code></a> is <code class="docutils literal notranslate"><span class="pre">(t,</span> <span class="pre">x,</span> <span class="pre">du,</span> <span class="pre">problem)</span></code>
+where <code class="docutils literal notranslate"><span class="pre">du</span></code> are the different derivatives used in the <em>Kushner-Dupuis</em> scheme.
+<code class="docutils literal notranslate"><span class="pre">du</span></code> is constructed in the following way. <code class="docutils literal notranslate"><span class="pre">du</span></code> is a <code class="docutils literal notranslate"><span class="pre">List[List[np.ndarray]]</span></code>
+with the entrys in the first dimension:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">du[0][x]</span></code> first order forward differences</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">du[1][x]</span></code> first order backwards differences</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">du[2][x]</span></code> second order differences</p></li>
+</ul>
+</div></blockquote>
+<p>The second dimension is the dimension of the corresponding spatial dimension.</p>
+<p>With this at hand the user defined optimization function could look like this</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">q_optim</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">du</span><span class="p">,</span> <span class="n">problem</span><span class="p">):</span>
+    <span class="c1"># gather derivatives</span>
+    <span class="c1"># forward differences</span>
+    <span class="n">dufx</span> <span class="o">=</span> <span class="n">du</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">dufy</span> <span class="o">=</span> <span class="n">du</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># backwards differences</span>
+    <span class="n">dubx</span> <span class="o">=</span> <span class="n">du</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">duby</span> <span class="o">=</span> <span class="n">du</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># second order differences (not used here only for completeness)</span>
+    <span class="c1"># ddux = du[2][0]</span>
+    <span class="c1"># dduy = du[2][1]</span>
+
+    <span class="c1"># get some variables for readability and evaluate the fitted polynomials</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">b</span>
+
+    <span class="c1"># split the sign function into a negative and positive part and calculate</span>
+    <span class="c1"># the corresponding optimal control values</span>
+    <span class="n">q_minus</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">y</span> <span class="o">+</span> <span class="n">h</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">duby</span> <span class="o">+</span> <span class="n">dubx</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
+    <span class="n">q_plus</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">y</span> <span class="o">-</span> <span class="n">h</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">duby</span> <span class="o">+</span> <span class="n">dubx</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
+
+    <span class="c1"># bounds on the controll with small neighbourhood around 0</span>
+    <span class="n">q_minus</span><span class="p">[</span><span class="n">q_minus</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+    <span class="n">q_minus</span><span class="p">[</span><span class="n">q_minus</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.3</span>
+    <span class="n">q_plus</span><span class="p">[</span><span class="n">q_plus</span> <span class="o">&lt;</span> <span class="mf">0.3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.3</span>
+    <span class="n">q_plus</span><span class="p">[</span><span class="n">q_plus</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="c1"># get the values off the calculated optimal control</span>
+    <span class="c1"># initialise a array to store the values</span>
+    <span class="n">f_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">problem</span><span class="o">.</span><span class="n">n_y</span><span class="p">,</span> <span class="n">problem</span><span class="o">.</span><span class="n">n_x</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+    <span class="c1"># values for the negative part of the control</span>
+    <span class="n">f_val</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">h</span> <span class="o">+</span> <span class="n">k</span> <span class="o">*</span> <span class="n">q_minus</span><span class="p">)</span> <span class="o">*</span> <span class="n">q_minus</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">q_minus</span><span class="p">)</span> <span class="o">*</span> <span class="n">duby</span> \
+        <span class="o">+</span> <span class="n">q_minus</span> <span class="o">*</span> <span class="n">dubx</span>
+
+    <span class="c1"># if the controll is zero the function value is 0</span>
+
+    <span class="c1"># values for the positive part of the control</span>
+    <span class="n">f_val</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">h</span> <span class="o">+</span> <span class="n">k</span> <span class="o">*</span> <span class="n">q_plus</span><span class="p">)</span> <span class="o">*</span> <span class="n">q_plus</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">q_plus</span><span class="p">)</span> <span class="o">*</span> <span class="n">dufy</span> \
+        <span class="o">+</span> <span class="n">q_plus</span> <span class="o">*</span> <span class="n">dufx</span>
+
+    <span class="c1"># with this structure we know that the negative part of the optimal control</span>
+    <span class="c1"># is the first entry in the third dimension and so on</span>
+    <span class="n">ind_q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">f_val</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># initialize a array for the optimal control and fill it with the corresponding</span>
+    <span class="c1"># values</span>
+    <span class="n">q_opt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">problem</span><span class="o">.</span><span class="n">n_y</span><span class="p">,</span> <span class="n">problem</span><span class="o">.</span><span class="n">n_x</span><span class="p">))</span>
+    <span class="n">q_opt</span><span class="p">[</span><span class="n">ind_q</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">q_minus</span><span class="p">[</span><span class="n">ind_q</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">q_opt</span><span class="p">[</span><span class="n">ind_q</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">q_opt</span><span class="p">[</span><span class="n">ind_q</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">q_plus</span><span class="p">[</span><span class="n">ind_q</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">q_opt</span>
+</pre></div>
+</div>
+<p>At last we have to give this functions as attribute to the <a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem" title="hjb.HjbProblem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem</span></code></a> class
+check the inputs, discretize and solve the problem</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># user defined functions</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">u_0</span> <span class="o">=</span> <span class="n">u_0</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">u_D</span> <span class="o">=</span> <span class="n">u_D</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">f</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">ddx</span> <span class="o">=</span> <span class="n">ddx</span>
+<span class="n">problem</span><span class="o">.</span><span class="n">q_opt_user</span> <span class="o">=</span> <span class="n">q_optim</span>
+
+<span class="c1"># check inputs, disretize and solve the problem</span>
+<span class="n">solve_hjb</span><span class="p">(</span><span class="n">problem</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Silke Glas u. a. „Intraday renewable electricity trading: advanced modeling
+and numerical optimal control“. In: Journal of Mathematics in Industry 10.1
+(2020), S. 3. ISSN: 2190-5983. DOI: 10.1186/s13362- 020- 0071- x. URL:
+<a class="reference external" href="https://doi.org/10.1186/s13362-020-0071-x">https://doi.org/10.1186/s13362-020-0071-x</a>.</p>
+</aside>
+</aside>
+</section>
+</section>
+<section id="solution-algorithm">
+<h2>Solution algorithm<a class="headerlink" href="#solution-algorithm" title="Link to this heading">#</a></h2>
+<p>For solving the HJB equation we are using the well known Howard-Algorithm. The
+algorithm consists of two steps. At the beginning we have to choose a initial
+control <span class="math notranslate nohighlight">\(q^{(0)} \in \mathcal{Q}\)</span>. After that we iterate as long as the
+termination criterion is bigger than a specified tolerance
+<span class="math notranslate nohighlight">\(||u^{(l)} - u^{(l - 1)}||_{\infty} &gt; \varepsilon_{tol}\)</span>. In the first step
+we solve the linear system from the discretization in space and time (since the
+control is fixed)</p>
+<div class="math notranslate nohighlight" id="equation-eq-howard-lin">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-howard-lin" title="Link to this equation">#</a></span>\[\left( [I - h_t \theta A^q] u(t_k, x_i) = \left[ I + h_t (1 - \theta) A^q \right]
+u(t_{k+1}, x_i) + h_t f(t_k, x_i, q)  \right)^{(l)}\]</div>
+<p>After this we update the control acording to</p>
+<div class="math notranslate nohighlight" id="equation-eq-arg-max">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-arg-max" title="Link to this equation">#</a></span>\[q^{(l+1)} = \text{arg}\,\max_{q \in \mathcal{Q}} \left\{-\theta A^q u(t_k, x_i)
+- (1 - \theta) A^q u(t_{k+1}, x_i) - f(t_k, x_i, q) \right\}\]</div>
+<p>in the <span class="math notranslate nohighlight">\(\max\)</span> case and analougus in the <span class="math notranslate nohighlight">\(\min\)</span> case. Equation
+<a class="reference internal" href="#equation-eq-arg-max">(4)</a> implys that we have to solved a optimization problem at
+every discretization point in space and time.</p>
+<p>We are solving the linear system of equations at each iteration in equation
+<a class="reference internal" href="#equation-eq-howard-lin">(3)</a> with the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.gmres.html#scipy.sparse.linalg.gmres" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.sparse.linalg.gmres</span></code></a> solver.</p>
+<p>For the Howard-Algorithm we can set these parameters</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem.tol" title="hjb.HjbProblem.tol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem.tol</span></code></a> tolerance for the convergence of the howard algorithm (default = <code class="docutils literal notranslate"><span class="pre">1e-6</span></code>)</p></li>
+<li><p><a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem.tol_gmres" title="hjb.HjbProblem.tol_gmres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem.tol_gmres</span></code></a> tolerance for the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.gmres.html#scipy.sparse.linalg.gmres" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.sparse.linalg.gmres</span></code></a> solver for the solution of the linear system of equation (default = <code class="docutils literal notranslate"><span class="pre">1e-9</span></code>)</p></li>
+<li><p><a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem.max_iter" title="hjb.HjbProblem.max_iter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem.max_iter</span></code></a> maximal amount of iterations in the howard algorithm (default = <code class="docutils literal notranslate"><span class="pre">100</span></code>)</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default value for <a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem.max_iter" title="hjb.HjbProblem.max_iter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem.max_iter</span></code></a> can be to low if the term
+<span class="math notranslate nohighlight">\(h_t/h_x &gt;&gt; 1\)</span> for the convergence of the howard algorithm.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hjb.hjb_solver.html#module-hjb.hjb_solver" title="hjb.hjb_solver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hjb_solver</span></code></a></p></td>
+<td><p>Implementation of the Howard algorithm</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="optimization-methods">
+<h2>Optimization methods<a class="headerlink" href="#optimization-methods" title="Link to this heading">#</a></h2>
+<p>To solve the optimization problem in equation <a class="reference internal" href="#equation-eq-arg-max">(4)</a> four
+different options are implemented. Each method comes with it own advantages and
+disadvantages.</p>
+<p>At first we are looking at the <a class="reference internal" href="generated/hjb.brute.html#hjb.brute" title="hjb.brute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute</span></code></a> method. This method discretizes the
+control and performs a line search for the best function value in the sup/inf.
+This version performs the comparison at each discretized control value to save
+some memory. This can be much slower than the <a class="reference internal" href="generated/hjb.brute_all.html#hjb.brute_all" title="hjb.brute_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute_all</span></code></a> method if the
+control discretization is fine since python is quite slow with loops and function
+calls to C routines. But you shouldn’t run out of memory this can only happen if
+your space discretization is pretty fine.</p>
+<p>Next is the <a class="reference internal" href="generated/hjb.brute_all.html#hjb.brute_all" title="hjb.brute_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute_all</span></code></a> method. This is conceptual the same as the
+<a class="reference internal" href="generated/hjb.brute.html#hjb.brute" title="hjb.brute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute</span></code></a> method with one difference. To gain some performance the line search
+is performed at all discretization points for the control at once. This means that
+it uses much more memory. The memory consumption is in the order
+<span class="math notranslate nohighlight">\(\mathcal{O}(n_x \cdot n_y \cdot n_q)\)</span>. This means you can easily run out of
+memory for a fine control and space discretization. But you gain some performance
+since we are saving some calls to the underlying <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argmax.html#numpy.argmax" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.argmax</span></code></a> funtion.</p>
+<p>The third method for the optimization problem is via user defined function
+<a class="reference internal" href="generated/hjb.optim_user_func.html#hjb.optim_user_func" title="hjb.optim_user_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optim_user_func</span></code></a>. If you have a optimality criteria wich can be derived e. g.
+analyticaly the normal way is to insert this optimality condition into the HJB and solve
+the nonlinear partial differential equation. This doesn’t have to be done with this method.
+This has the advantage that one does not have to perform the error prone algebraic manipulations
+if the optimality criteria is lengthy. Anothter benefit is that you don’t have to write
+a new discretization scheme for the resulting non linear PDE as long as the HJB is in the form
+of equation <a class="reference internal" href="#equation-eq-hjb-min">(1)</a> and equation <a class="reference internal" href="#equation-eq-hjb-max">(2)</a>. This is by
+far the fastest method.</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hjb.brute.html#hjb.brute" title="hjb.brute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute</span></code></a>(solver, problem)</p></td>
+<td><p>Calculates the optimal control for the current solution with a line search</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hjb.brute_all.html#hjb.brute_all" title="hjb.brute_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">brute_all</span></code></a>(Solver, Problem, HjbOperator)</p></td>
+<td><p>Calculates the optimal control for the current solution with a line search</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hjb.scalar.html#hjb.scalar" title="hjb.scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar</span></code></a>(solver, problem)</p></td>
+<td><p>Calculates the optimal control with the scipy.optimize.minimize_scalar function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hjb.optim_user_func.html#hjb.optim_user_func" title="hjb.optim_user_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optim_user_func</span></code></a>(solver, Problem)</p></td>
+<td><p>Calculates the optimal control based on a user function to calculate the</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hjb.HjbProblem.html#hjb.HjbProblem" title="hjb.HjbProblem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbProblem</span></code></a>(dimension, order, max_min, ...)</p></td>
+<td><p>Class for all the parameters of the specified problem.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hjb.Solver.html#hjb.Solver" title="hjb.Solver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Solver</span></code></a>(Problem)</p></td>
+<td><p>Solver class where all the necessary data for the howard algorithm is stored.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hjb.HjbOperator.html#hjb.HjbOperator" title="hjb.HjbOperator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HjbOperator</span></code></a>(Problem)</p></td>
+<td><p>Class for the construction of the discretization scheme.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Institute of Numerical Mathematics Code Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="generated/hjb.hjb_solver.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">hjb.hjb_solver</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-hints">General Hints</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-algorithm">Solution algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-methods">Optimization methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/modules/hjb.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Institute of Numerical Mathematics, Ulm University.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,779 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hjb.hjb_problem &#8212; Institute of Numerical Mathematics Code Documentation 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/hjb/hjb_problem';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Institute of Numerical Mathematics Code Documentation 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../modules/hjb.html">
+    hjb
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../devs/guidelines.html">
+    Documentation Guidelines
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../modules/hjb.html">
+    hjb
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../devs/guidelines.html">
+    Documentation Guidelines
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">hjb.hjb_problem</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for hjb.hjb_problem</h1><div class="highlight"><pre>
+<span></span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">============================</span>
+<span class="sd">HjbProblem :mod:`HjbProblem`</span>
+<span class="sd">============================</span>
+
+<span class="sd">Class for all the parameters of the problem to be solved</span>
+
+<span class="sd">.. sectionauthor::</span>
+<span class="sd">	Thomas Ingel, Feb 2023</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<div class="viewcode-block" id="HjbProblem">
+<a class="viewcode-back" href="../../modules/generated/hjb.HjbProblem.html#hjb.HjbProblem">[docs]</a>
+<span class="k">class</span> <span class="nc">HjbProblem</span><span class="p">:</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">	Class for all the parameters of the specified problem.</span>
+
+<span class="sd">	This class is responsible for the discretziation and the book keeping </span>
+<span class="sd">	of the parameters of the problem.</span>
+
+<span class="sd">	Attributes</span>
+<span class="sd">	----------</span>
+
+<span class="sd">		x_min : float</span>
+<span class="sd">			Lower bound for the first spatial dimension. Default: -1.0</span>
+
+<span class="sd">		x_max : float</span>
+<span class="sd">			Upper bound for the first spatial dimension. Default: 1.0</span>
+
+<span class="sd">		q_min : float</span>
+<span class="sd">			Lower bound for the control values. If the control values is not</span>
+<span class="sd">			bounded in the -infinity direction you have to specify it as an </span>
+<span class="sd">			empty list. Default: -1.0</span>
+
+<span class="sd">		q_max : float</span>
+<span class="sd">			Upper bound for the control values. If the control values is not</span>
+<span class="sd">			bounded in the +infinity direction you have to specify it as an </span>
+<span class="sd">			empty list. Default: 1.0</span>
+
+<span class="sd">		T : float</span>
+<span class="sd">			Endtime of the time dependent problem. Default: 1.0</span>
+
+<span class="sd">		f : Callable</span>
+<span class="sd">			User defined function for the volume force.</span>
+
+<span class="sd">		u_D : Callable</span>
+<span class="sd">			User defined dirichlet boundary conditions. If the problem is one </span>
+<span class="sd">			dimensional you have to specify a list with two entrys where the </span>
+<span class="sd">			value on left bound is in the first entry of the list and the value</span>
+<span class="sd">			on the right bound is in the second entry. </span>
+
+<span class="sd">			If the Problem is two dimensional you have to specify it as a list</span>
+<span class="sd">			with **four** :obj:`numpy.ndarray`\ s in the following order:</span>
+
+<span class="sd">				1. Top boundary conditions</span>
+
+<span class="sd">				2. Right boundary conditions</span>
+
+<span class="sd">				3. Bottom boundary conditions</span>
+
+<span class="sd">				4. Left boundary conditions</span>
+
+<span class="sd">		u_0 : Callable</span>
+<span class="sd">			User defined initial conditions. Have to return a :obj:`numpy.ndarray` of the </span>
+<span class="sd">			appropriate size.</span>
+
+<span class="sd">		order : int {1, 2}</span>
+<span class="sd">			Order of the highest derivative term</span>
+
+<span class="sd">		dimension : int {1, 2}</span>
+<span class="sd">			Spatial dimension of the problem</span>
+
+<span class="sd">		max_min : str {``&quot;min&quot;``, ``&quot;max&quot;``}</span>
+<span class="sd">			Either ``max`` or ``min`` depending wheter you have a supremum or a infimum</span>
+<span class="sd">			in your HJB equation. This option is only necessary if you don&#39;t </span>
+<span class="sd">			specify a user defined optimization routine.</span>
+
+<span class="sd">		theta : float or int [0, 1]</span>
+<span class="sd">			Theta parameter in the time discretization</span>
+
+<span class="sd">		tol : float</span>
+<span class="sd">			Termination criterium for the howard algorithm</span>
+
+<span class="sd">		max_iter : float</span>
+<span class="sd">			Maximum amount of iterations allowed in the howard algorithm</span>
+
+<span class="sd">		tol_gmres : float</span>
+<span class="sd">			Tolerance for the GMRES solver for solving the linear system of </span>
+<span class="sd">			equations</span>
+
+<span class="sd">		info : int {0, 1}</span>
+<span class="sd">			Information level of the solver. Supported are level 0 wich only </span>
+<span class="sd">			writes wheter the howard algorithm terminated or not and the norm </span>
+<span class="sd">			of the sucessfull or unsecussfull step. Level 1 writtes the norm of</span>
+<span class="sd">			all the iterations in the Howard algorithm</span>
+<span class="sd">			</span>
+<span class="sd">		n_x : int</span>
+<span class="sd">			Number of points in the equidistant spatial discretization in the </span>
+<span class="sd">			first dimension</span>
+
+<span class="sd">		n_t : int</span>
+<span class="sd">			Number of points in the equdistant time discretization</span>
+
+<span class="sd">		optim_method : str {``&quot;user_func&quot;``, ``&quot;brute_all&quot;``, ``&quot;brute&quot;``, ``&quot;scalar&quot;``}</span>
+<span class="sd">			Optimization method wich shall be used</span>
+
+<span class="sd">		n_q : int</span>
+<span class="sd">			Number of points in the equidistant controll discretization</span>
+
+<span class="sd">		q_opt_user : Callabel</span>
+<span class="sd">			User suplied optimization routine</span>
+
+<span class="sd">		dx : Callable</span>
+<span class="sd">			User suplied calculation of the terms infront of the first order </span>
+<span class="sd">			derivatives. Has to return a list with entrys of partial derivatives</span>
+<span class="sd">			in the corresponding direction.</span>
+
+<span class="sd">		ddx: Callable</span>
+<span class="sd">			User suplied calculation of the terms infront of the second order </span>
+<span class="sd">			derivatives. Has to return a list with entrys of partial derivatives</span>
+<span class="sd">			in the corresponding direciton.</span>
+
+<span class="sd">		y_min : float</span>
+<span class="sd">			Lower bound for the second spatial dimension. Default: -1.0</span>
+
+<span class="sd">		y_max : float</span>
+<span class="sd">			Upper bound for the second spatial dimension. Default: 1.0</span>
+
+<span class="sd">		n_y : int</span>
+<span class="sd">			Number of points in the equidistant spatial discretization in the </span>
+<span class="sd">			second dimension</span>
+
+<span class="sd">		sol : List[ndarray]</span>
+<span class="sd">			List of the calculated solutions. Each element in the list is a </span>
+<span class="sd">			:obj:`numpy.ndarray` with the solution at this time step.</span>
+
+<span class="sd">		q_opt : List[ndarray]</span>
+<span class="sd">			List of the calculated optimal control values. Each element in the </span>
+<span class="sd">			list is a :obj:`numpy.ndarray` with the solution at this time step.	</span>
+
+<span class="sd">		x : List[ndarray]</span>
+<span class="sd">			Spatial discretization of the domain. Each entry in the list is </span>
+<span class="sd">			a spatial direction </span>
+
+<span class="sd">		dofs : int</span>
+<span class="sd">			Number of degrees of freedom for the discretized domain without the</span>
+<span class="sd">			boundary points.</span>
+
+<span class="sd">		t_d : ndarray</span>
+<span class="sd">			Discretized time dimension.</span>
+
+<span class="sd">		h_t : float</span>
+<span class="sd">			Step size in time.</span>
+
+<span class="sd">		h_x : float</span>
+<span class="sd">			Step size in the first spatial dimension.</span>
+
+<span class="sd">		h_y : float</span>
+<span class="sd">			Step size in the second spatial dimension.</span>
+
+<span class="sd">	&quot;&quot;&quot;</span>
+
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">order</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">max_min</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+		<span class="n">optim_method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">info</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">theta</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="c1"># problem parameters</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">x_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">x_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">q_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">q_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">u_D</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">u_0</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">=</span> <span class="n">dimension</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">max_min</span> <span class="o">=</span> <span class="n">max_min</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-6</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">max_iter</span> <span class="o">=</span> <span class="mi">100</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">tol_gmres</span> <span class="o">=</span> <span class="mf">1e-9</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="o">=</span> <span class="n">info</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">q_d</span> <span class="o">=</span> <span class="p">[]</span>
+		
+		<span class="c1"># discretization parameters</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">n_x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">11</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">n_t</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">11</span>
+		
+		<span class="c1"># options for optimization procedure</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">optim_method</span> <span class="o">=</span> <span class="n">optim_method</span>
+
+		<span class="c1"># if we do a line search we need the number of points and discretize the</span>
+		<span class="c1"># control</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">optim_method</span> <span class="o">==</span> <span class="s2">&quot;brute&quot;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">optim_method</span> <span class="o">==</span> <span class="s2">&quot;brute_all&quot;</span> <span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">n_q</span> <span class="o">=</span> <span class="mi">11</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">optim_method</span> <span class="o">==</span> <span class="s2">&quot;user_func&quot;</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">q_opt_user</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="p">[]</span>
+		
+		<span class="c1"># terms in front of first and second order derivativ</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">dx</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">ddx</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="p">[]</span>
+		
+		<span class="c1"># intervall for second dimension</span>
+		<span class="k">if</span> <span class="n">dimension</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">y_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">y_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">n_y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">11</span>
+
+		<span class="c1"># fields for solution and plotting of the solution</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">sol</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">q_opt</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">dofs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="HjbProblem.discretize">
+<a class="viewcode-back" href="../../modules/generated/generated/hjb.HjbProblem.discretize.html#hjb.HjbProblem.discretize">[docs]</a>
+	<span class="k">def</span> <span class="nf">discretize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Function wich discretizes the spatial, time dimensions and if necessary</span>
+<span class="sd">		the control (discretizes the control only if it isn&#39;t specified)</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+
+		<span class="c1"># time discretization in reverse order because we solve the HJB </span>
+		<span class="c1"># backwards in time</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">t_d</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_t</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">h_t</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+		<span class="c1"># spatial discretization</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="n">_x_d</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_max</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_x</span><span class="p">,</span>
+				<span class="kc">True</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_x_d</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">h_x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_min</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">_x_d</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_max</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_x</span><span class="p">,</span> 
+				<span class="kc">True</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">h_x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_min</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+			
+			<span class="c1"># reverse order so the y-axis goes upwards</span>
+			<span class="n">_y_d</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_max</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_y</span><span class="p">,</span> 
+				<span class="kc">True</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">h_y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_min</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+			<span class="n">_x_d</span><span class="p">,</span> <span class="n">_y_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">_x_d</span><span class="p">,</span> <span class="n">_y_d</span><span class="p">)</span>
+			
+			<span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_x_d</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_y_d</span><span class="p">)</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">optim_method</span> <span class="o">==</span> <span class="s2">&quot;brute&quot;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">optim_method</span> <span class="o">==</span> <span class="s2">&quot;brute_all&quot;</span><span class="p">:</span>
+			<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_d</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+				<span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_d</span><span class="p">:</span>
+					<span class="bp">self</span><span class="o">.</span><span class="n">q_d</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_max</span><span class="p">,</span> 
+						<span class="bp">self</span><span class="o">.</span><span class="n">n_q</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+				<span class="k">else</span><span class="p">:</span>
+					<span class="bp">self</span><span class="o">.</span><span class="n">q_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_d</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HjbProblem.check_input_and_discretize">
+<a class="viewcode-back" href="../../modules/generated/generated/hjb.HjbProblem.check_input_and_discretize.html#hjb.HjbProblem.check_input_and_discretize">[docs]</a>
+	<span class="k">def</span> <span class="nf">check_input_and_discretize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Function to discretize and checking of obviuos input errors</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="c1"># TODO: write input checks</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">discretize</span><span class="p">()</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">get_non_bcs_ind</span><span class="p">()</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">sol</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">u_0</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">dofs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_x</span> <span class="o">-</span> <span class="mi">2</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">dofs</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_y</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HjbProblem.get_non_bcs_ind">
+<a class="viewcode-back" href="../../modules/generated/generated/hjb.HjbProblem.get_non_bcs_ind.html#hjb.HjbProblem.get_non_bcs_ind">[docs]</a>
+	<span class="k">def</span> <span class="nf">get_non_bcs_ind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Function to calculate the indices wich are not on the boundary</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="c1"># easier to implement if we make the matrix and then cut off the bound</span>
+		<span class="c1"># ary points	</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="n">_inds</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">inds</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">_inds</span><span class="p">,</span> <span class="n">_inds</span><span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">_inds</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> \
+				<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_x</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_y</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">n_y</span><span class="p">,</span> 
+				<span class="bp">self</span><span class="o">.</span><span class="n">n_x</span><span class="p">))</span>
+			<span class="n">_inds</span> <span class="o">=</span> <span class="n">_inds</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">inds</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ix_</span><span class="p">(</span><span class="n">_inds</span><span class="p">,</span> <span class="n">_inds</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HjbProblem.check_inputs">
+<a class="viewcode-back" href="../../modules/generated/generated/hjb.HjbProblem.check_inputs.html#hjb.HjbProblem.check_inputs">[docs]</a>
+	<span class="k">def</span> <span class="nf">check_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Function to check for obvious input errors.</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="k">def</span> <span class="nf">check_atribute_type_float_or_int</span><span class="p">(</span><span class="n">attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+			<span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">:</span>
+				<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute</span><span class="p">),</span> <span class="nb">float</span><span class="p">)</span> <span class="ow">or</span> 
+				<span class="nb">isinstance</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute</span><span class="p">),</span> <span class="nb">int</span><span class="p">)):</span>
+					<span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">attribute</span> <span class="o">+</span> <span class="s2">&quot; must be of type float or int&quot;</span><span class="p">)</span>
+
+		<span class="k">def</span> <span class="nf">check_attribute_type_int</span><span class="p">(</span><span class="n">attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+			<span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">:</span>
+				<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute</span><span class="p">),</span> <span class="nb">int</span><span class="p">):</span>
+					<span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">attribute</span> <span class="o">+</span> <span class="s2">&quot; must be of type int&quot;</span><span class="p">)</span>
+
+		<span class="k">def</span> <span class="nf">check_user_funcs_exists</span><span class="p">(</span><span class="n">func_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+			<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">func_names</span><span class="p">:</span>
+				<span class="k">if</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">)):</span>
+					<span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">func</span> <span class="o">+</span> <span class="s2">&quot; musst be a callable function&quot;</span><span class="p">)</span>
+
+		<span class="c1"># check type and number of dimensions</span>
+		<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dimension</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Dimensions must be of type int&quot;</span><span class="p">)</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only one and two dimensions are supported not&quot;</span><span class="p">,</span> 
+				<span class="bp">self</span><span class="o">.</span><span class="n">dimension</span><span class="p">)</span>
+
+		<span class="c1"># check order and type of order</span>
+		<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Order must be of type int&quot;</span><span class="p">)</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only order one and two are supported not&quot;</span><span class="p">,</span> 
+				<span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">)</span>
+
+		<span class="c1"># check input types</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="n">attr_to_type_check</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;x_max&quot;</span><span class="p">,</span> <span class="s2">&quot;x_min&quot;</span><span class="p">,</span> <span class="s2">&quot;q_max&quot;</span><span class="p">,</span> <span class="s2">&quot;q_min&quot;</span><span class="p">,</span> 
+			<span class="s2">&quot;theta&quot;</span><span class="p">]</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+			<span class="n">attr_to_type_check</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;x_max&quot;</span><span class="p">,</span> <span class="s2">&quot;x_min&quot;</span><span class="p">,</span> <span class="s2">&quot;y_min&quot;</span><span class="p">,</span> <span class="s2">&quot;y_max&quot;</span><span class="p">,</span> 
+				<span class="s2">&quot;q_max&quot;</span><span class="p">,</span> <span class="s2">&quot;q_min&quot;</span><span class="p">,</span> <span class="s2">&quot;theta&quot;</span><span class="p">]</span>
+
+		<span class="n">check_atribute_type_float_or_int</span><span class="p">(</span><span class="n">attr_to_type_check</span><span class="p">)</span>
+
+		<span class="c1"># check input values</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;T muss be greater than 0&quot;</span><span class="p">)</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_max</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_min</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;x_max must be greater than x_min&quot;</span><span class="p">,</span> <span class="s2">&quot;x_max&quot;</span><span class="p">,</span>    
+			<span class="bp">self</span><span class="o">.</span><span class="n">x_max</span><span class="p">,</span> <span class="s2">&quot;x_min&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_min</span><span class="p">)</span>  
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_max</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_min</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;q_max must be greater than q_min&quot;</span><span class="p">,</span> <span class="s2">&quot;q_max&quot;</span><span class="p">,</span>    
+			<span class="bp">self</span><span class="o">.</span><span class="n">q_max</span><span class="p">,</span> <span class="s2">&quot;q_min&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_min</span><span class="p">)</span>  
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;y_min&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;y_max&#39;</span><span class="p">):</span>
+				<span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;y_min or y_max specified for dimension 1&quot;</span><span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_max</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_min</span><span class="p">:</span>
+				<span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;y_max must be greater than y_min&quot;</span><span class="p">,</span> <span class="s2">&quot;y_max&quot;</span><span class="p">,</span> 
+				<span class="bp">self</span><span class="o">.</span><span class="n">y_max</span><span class="p">,</span> <span class="s2">&quot;y_min&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_min</span><span class="p">)</span>
+
+		<span class="c1"># check if discretization points are integers</span>
+		<span class="n">ints_to_check</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;n_t&quot;</span><span class="p">,</span> <span class="s2">&quot;n_x&quot;</span><span class="p">,</span> <span class="s2">&quot;n_q&quot;</span><span class="p">]</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dimension</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;n_y&quot;</span><span class="p">):</span>
+				<span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;n_y specified for dimension 1&quot;</span><span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">ints_to_check</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;n_y&quot;</span><span class="p">)</span>
+
+		<span class="n">check_attribute_type_int</span><span class="p">(</span><span class="n">ints_to_check</span><span class="p">)</span>
+
+		<span class="c1"># check if the user suplied the necessary functions</span>
+		<span class="n">funcs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;u_D&quot;</span><span class="p">,</span> <span class="s2">&quot;u_0&quot;</span><span class="p">,</span> <span class="s2">&quot;dx&quot;</span><span class="p">]</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;ddx&quot;</span><span class="p">):</span>
+				<span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;ddx specified for order 1&quot;</span><span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">funcs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ddx&quot;</span><span class="p">)</span>
+
+		<span class="n">check_user_funcs_exists</span><span class="p">(</span><span class="n">funcs</span><span class="p">)</span></div>
+</div>
+
+		<span class="c1"># TODO: Wright check for optimization methods</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Institute of Numerical Mathematics, Ulm University.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

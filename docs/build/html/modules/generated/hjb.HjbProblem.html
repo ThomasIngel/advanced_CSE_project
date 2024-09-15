@@ -1,0 +1,948 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hjb.HjbProblem &#8212; Institute of Numerical Mathematics Code Documentation 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modules/generated/hjb.HjbProblem';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="hjb.HjbProblem.check_input_and_discretize" href="generated/hjb.HjbProblem.check_input_and_discretize.html" />
+    <link rel="prev" title="hjb.optim_user_func" href="hjb.optim_user_func.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Institute of Numerical Mathematics Code Documentation 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../hjb.html">
+    hjb
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../devs/guidelines.html">
+    Documentation Guidelines
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../hjb.html">
+    hjb
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../devs/guidelines.html">
+    Documentation Guidelines
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hjb.hjb_solver.html">hjb.hjb_solver</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hjb.brute.html">hjb.brute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hjb.brute_all.html">hjb.brute_all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hjb.scalar.html">hjb.scalar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hjb.optim_user_func.html">hjb.optim_user_func</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">hjb.HjbProblem</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbProblem.check_input_and_discretize.html">hjb.HjbProblem.check_input_and_discretize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbProblem.check_inputs.html">hjb.HjbProblem.check_inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbProblem.discretize.html">hjb.HjbProblem.discretize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbProblem.get_non_bcs_ind.html">hjb.HjbProblem.get_non_bcs_ind</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="hjb.Solver.html">hjb.Solver</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="hjb.HjbOperator.html">hjb.HjbOperator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbOperator.construct_matrix.html">hjb.HjbOperator.construct_matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbOperator.get_diagonals.html">hjb.HjbOperator.get_diagonals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbOperator.get_unraveld_diagonals.html">hjb.HjbOperator.get_unraveld_diagonals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/hjb.HjbOperator.shape_diagonals.html">hjb.HjbOperator.shape_diagonals</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../hjb.html" class="nav-link"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hjb</span></code></a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">hjb.HjbProblem</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hjb-hjbproblem">
+<h1>hjb.HjbProblem<a class="headerlink" href="#hjb-hjbproblem" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hjb.HjbProblem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hjb.</span></span><span class="sig-name descname"><span class="pre">HjbProblem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">optim_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hjb/hjb_problem.html#HjbProblem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hjb.HjbProblem" title="Link to this definition">#</a></dt>
+<dd><p>Class for all the parameters of the specified problem.</p>
+<p>This class is responsible for the discretziation and the book keeping
+of the parameters of the problem.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.x_min">
+<span class="sig-name descname"><span class="pre">x_min</span></span><a class="headerlink" href="#hjb.HjbProblem.x_min" title="Link to this definition">#</a></dt>
+<dd><p>Lower bound for the first spatial dimension. Default: -1.0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.x_max">
+<span class="sig-name descname"><span class="pre">x_max</span></span><a class="headerlink" href="#hjb.HjbProblem.x_max" title="Link to this definition">#</a></dt>
+<dd><p>Upper bound for the first spatial dimension. Default: 1.0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.q_min">
+<span class="sig-name descname"><span class="pre">q_min</span></span><a class="headerlink" href="#hjb.HjbProblem.q_min" title="Link to this definition">#</a></dt>
+<dd><p>Lower bound for the control values. If the control values is not
+bounded in the -infinity direction you have to specify it as an
+empty list. Default: -1.0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.q_max">
+<span class="sig-name descname"><span class="pre">q_max</span></span><a class="headerlink" href="#hjb.HjbProblem.q_max" title="Link to this definition">#</a></dt>
+<dd><p>Upper bound for the control values. If the control values is not
+bounded in the +infinity direction you have to specify it as an
+empty list. Default: 1.0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.T">
+<span class="sig-name descname"><span class="pre">T</span></span><a class="headerlink" href="#hjb.HjbProblem.T" title="Link to this definition">#</a></dt>
+<dd><p>Endtime of the time dependent problem. Default: 1.0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.f">
+<span class="sig-name descname"><span class="pre">f</span></span><a class="headerlink" href="#hjb.HjbProblem.f" title="Link to this definition">#</a></dt>
+<dd><p>User defined function for the volume force.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.u_D">
+<span class="sig-name descname"><span class="pre">u_D</span></span><a class="headerlink" href="#hjb.HjbProblem.u_D" title="Link to this definition">#</a></dt>
+<dd><p>User defined dirichlet boundary conditions. If the problem is one
+dimensional you have to specify a list with two entrys where the
+value on left bound is in the first entry of the list and the value
+on the right bound is in the second entry.</p>
+<p>If the Problem is two dimensional you have to specify it as a list
+with <strong>four</strong> <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>s in the following order:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Top boundary conditions</p></li>
+<li><p>Right boundary conditions</p></li>
+<li><p>Bottom boundary conditions</p></li>
+<li><p>Left boundary conditions</p></li>
+</ol>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.u_0">
+<span class="sig-name descname"><span class="pre">u_0</span></span><a class="headerlink" href="#hjb.HjbProblem.u_0" title="Link to this definition">#</a></dt>
+<dd><p>User defined initial conditions. Have to return a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> of the
+appropriate size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.order">
+<span class="sig-name descname"><span class="pre">order</span></span><a class="headerlink" href="#hjb.HjbProblem.order" title="Link to this definition">#</a></dt>
+<dd><p>Order of the highest derivative term</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int {1, 2}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.dimension">
+<span class="sig-name descname"><span class="pre">dimension</span></span><a class="headerlink" href="#hjb.HjbProblem.dimension" title="Link to this definition">#</a></dt>
+<dd><p>Spatial dimension of the problem</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int {1, 2}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.max_min">
+<span class="sig-name descname"><span class="pre">max_min</span></span><a class="headerlink" href="#hjb.HjbProblem.max_min" title="Link to this definition">#</a></dt>
+<dd><p>Either <code class="docutils literal notranslate"><span class="pre">max</span></code> or <code class="docutils literal notranslate"><span class="pre">min</span></code> depending wheter you have a supremum or a infimum
+in your HJB equation. This option is only necessary if you don’t
+specify a user defined optimization routine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str {<code class="docutils literal notranslate"><span class="pre">&quot;min&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;max&quot;</span></code>}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.theta">
+<span class="sig-name descname"><span class="pre">theta</span></span><a class="headerlink" href="#hjb.HjbProblem.theta" title="Link to this definition">#</a></dt>
+<dd><p>Theta parameter in the time discretization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a> or <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)">int</a> [0, 1]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.tol">
+<span class="sig-name descname"><span class="pre">tol</span></span><a class="headerlink" href="#hjb.HjbProblem.tol" title="Link to this definition">#</a></dt>
+<dd><p>Termination criterium for the howard algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.max_iter">
+<span class="sig-name descname"><span class="pre">max_iter</span></span><a class="headerlink" href="#hjb.HjbProblem.max_iter" title="Link to this definition">#</a></dt>
+<dd><p>Maximum amount of iterations allowed in the howard algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.tol_gmres">
+<span class="sig-name descname"><span class="pre">tol_gmres</span></span><a class="headerlink" href="#hjb.HjbProblem.tol_gmres" title="Link to this definition">#</a></dt>
+<dd><p>Tolerance for the GMRES solver for solving the linear system of
+equations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#hjb.HjbProblem.info" title="Link to this definition">#</a></dt>
+<dd><p>Information level of the solver. Supported are level 0 wich only
+writes wheter the howard algorithm terminated or not and the norm
+of the sucessfull or unsecussfull step. Level 1 writtes the norm of
+all the iterations in the Howard algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int {0, 1}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.n_x">
+<span class="sig-name descname"><span class="pre">n_x</span></span><a class="headerlink" href="#hjb.HjbProblem.n_x" title="Link to this definition">#</a></dt>
+<dd><p>Number of points in the equidistant spatial discretization in the
+first dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.n_t">
+<span class="sig-name descname"><span class="pre">n_t</span></span><a class="headerlink" href="#hjb.HjbProblem.n_t" title="Link to this definition">#</a></dt>
+<dd><p>Number of points in the equdistant time discretization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.optim_method">
+<span class="sig-name descname"><span class="pre">optim_method</span></span><a class="headerlink" href="#hjb.HjbProblem.optim_method" title="Link to this definition">#</a></dt>
+<dd><p>Optimization method wich shall be used</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str {<code class="docutils literal notranslate"><span class="pre">&quot;user_func&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;brute_all&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;brute&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;scalar&quot;</span></code>}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.n_q">
+<span class="sig-name descname"><span class="pre">n_q</span></span><a class="headerlink" href="#hjb.HjbProblem.n_q" title="Link to this definition">#</a></dt>
+<dd><p>Number of points in the equidistant controll discretization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.q_opt_user">
+<span class="sig-name descname"><span class="pre">q_opt_user</span></span><a class="headerlink" href="#hjb.HjbProblem.q_opt_user" title="Link to this definition">#</a></dt>
+<dd><p>User suplied optimization routine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callabel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.dx">
+<span class="sig-name descname"><span class="pre">dx</span></span><a class="headerlink" href="#hjb.HjbProblem.dx" title="Link to this definition">#</a></dt>
+<dd><p>User suplied calculation of the terms infront of the first order
+derivatives. Has to return a list with entrys of partial derivatives
+in the corresponding direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.ddx">
+<span class="sig-name descname"><span class="pre">ddx</span></span><a class="headerlink" href="#hjb.HjbProblem.ddx" title="Link to this definition">#</a></dt>
+<dd><p>User suplied calculation of the terms infront of the second order
+derivatives. Has to return a list with entrys of partial derivatives
+in the corresponding direciton.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.y_min">
+<span class="sig-name descname"><span class="pre">y_min</span></span><a class="headerlink" href="#hjb.HjbProblem.y_min" title="Link to this definition">#</a></dt>
+<dd><p>Lower bound for the second spatial dimension. Default: -1.0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.y_max">
+<span class="sig-name descname"><span class="pre">y_max</span></span><a class="headerlink" href="#hjb.HjbProblem.y_max" title="Link to this definition">#</a></dt>
+<dd><p>Upper bound for the second spatial dimension. Default: 1.0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.n_y">
+<span class="sig-name descname"><span class="pre">n_y</span></span><a class="headerlink" href="#hjb.HjbProblem.n_y" title="Link to this definition">#</a></dt>
+<dd><p>Number of points in the equidistant spatial discretization in the
+second dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.sol">
+<span class="sig-name descname"><span class="pre">sol</span></span><a class="headerlink" href="#hjb.HjbProblem.sol" title="Link to this definition">#</a></dt>
+<dd><p>List of the calculated solutions. Each element in the list is a
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> with the solution at this time step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.q_opt">
+<span class="sig-name descname"><span class="pre">q_opt</span></span><a class="headerlink" href="#hjb.HjbProblem.q_opt" title="Link to this definition">#</a></dt>
+<dd><p>List of the calculated optimal control values. Each element in the
+list is a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> with the solution at this time step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.x">
+<span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#hjb.HjbProblem.x" title="Link to this definition">#</a></dt>
+<dd><p>Spatial discretization of the domain. Each entry in the list is
+a spatial direction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.dofs">
+<span class="sig-name descname"><span class="pre">dofs</span></span><a class="headerlink" href="#hjb.HjbProblem.dofs" title="Link to this definition">#</a></dt>
+<dd><p>Number of degrees of freedom for the discretized domain without the
+boundary points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.t_d">
+<span class="sig-name descname"><span class="pre">t_d</span></span><a class="headerlink" href="#hjb.HjbProblem.t_d" title="Link to this definition">#</a></dt>
+<dd><p>Discretized time dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.h_t">
+<span class="sig-name descname"><span class="pre">h_t</span></span><a class="headerlink" href="#hjb.HjbProblem.h_t" title="Link to this definition">#</a></dt>
+<dd><p>Step size in time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.h_x">
+<span class="sig-name descname"><span class="pre">h_x</span></span><a class="headerlink" href="#hjb.HjbProblem.h_x" title="Link to this definition">#</a></dt>
+<dd><p>Step size in the first spatial dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hjb.HjbProblem.h_y">
+<span class="sig-name descname"><span class="pre">h_y</span></span><a class="headerlink" href="#hjb.HjbProblem.h_y" title="Link to this definition">#</a></dt>
+<dd><p>Step size in the second spatial dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.14)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hjb.HjbProblem.check_input_and_discretize.html#hjb.HjbProblem.check_input_and_discretize" title="hjb.HjbProblem.check_input_and_discretize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_input_and_discretize</span></code></a>()</p></td>
+<td><p>Function to discretize and checking of obviuos input errors</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hjb.HjbProblem.check_inputs.html#hjb.HjbProblem.check_inputs" title="hjb.HjbProblem.check_inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_inputs</span></code></a>()</p></td>
+<td><p>Function to check for obvious input errors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hjb.HjbProblem.discretize.html#hjb.HjbProblem.discretize" title="hjb.HjbProblem.discretize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">discretize</span></code></a>()</p></td>
+<td><p>Function wich discretizes the spatial, time dimensions and if necessary the control (discretizes the control only if it isn't specified)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hjb.HjbProblem.get_non_bcs_ind.html#hjb.HjbProblem.get_non_bcs_ind" title="hjb.HjbProblem.get_non_bcs_ind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_non_bcs_ind</span></code></a>()</p></td>
+<td><p>Function to calculate the indices wich are not on the boundary</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hjb.optim_user_func.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">hjb.optim_user_func</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="generated/hjb.HjbProblem.check_input_and_discretize.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">hjb.HjbProblem.check_input_and_discretize</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem"><code class="docutils literal notranslate"><span class="pre">HjbProblem</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.x_min"><code class="docutils literal notranslate"><span class="pre">HjbProblem.x_min</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.x_max"><code class="docutils literal notranslate"><span class="pre">HjbProblem.x_max</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.q_min"><code class="docutils literal notranslate"><span class="pre">HjbProblem.q_min</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.q_max"><code class="docutils literal notranslate"><span class="pre">HjbProblem.q_max</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.T"><code class="docutils literal notranslate"><span class="pre">HjbProblem.T</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.f"><code class="docutils literal notranslate"><span class="pre">HjbProblem.f</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.u_D"><code class="docutils literal notranslate"><span class="pre">HjbProblem.u_D</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.u_0"><code class="docutils literal notranslate"><span class="pre">HjbProblem.u_0</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.order"><code class="docutils literal notranslate"><span class="pre">HjbProblem.order</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.dimension"><code class="docutils literal notranslate"><span class="pre">HjbProblem.dimension</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.max_min"><code class="docutils literal notranslate"><span class="pre">HjbProblem.max_min</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.theta"><code class="docutils literal notranslate"><span class="pre">HjbProblem.theta</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.tol"><code class="docutils literal notranslate"><span class="pre">HjbProblem.tol</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.max_iter"><code class="docutils literal notranslate"><span class="pre">HjbProblem.max_iter</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.tol_gmres"><code class="docutils literal notranslate"><span class="pre">HjbProblem.tol_gmres</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.info"><code class="docutils literal notranslate"><span class="pre">HjbProblem.info</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.n_x"><code class="docutils literal notranslate"><span class="pre">HjbProblem.n_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.n_t"><code class="docutils literal notranslate"><span class="pre">HjbProblem.n_t</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.optim_method"><code class="docutils literal notranslate"><span class="pre">HjbProblem.optim_method</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.n_q"><code class="docutils literal notranslate"><span class="pre">HjbProblem.n_q</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.q_opt_user"><code class="docutils literal notranslate"><span class="pre">HjbProblem.q_opt_user</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.dx"><code class="docutils literal notranslate"><span class="pre">HjbProblem.dx</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.ddx"><code class="docutils literal notranslate"><span class="pre">HjbProblem.ddx</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.y_min"><code class="docutils literal notranslate"><span class="pre">HjbProblem.y_min</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.y_max"><code class="docutils literal notranslate"><span class="pre">HjbProblem.y_max</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.n_y"><code class="docutils literal notranslate"><span class="pre">HjbProblem.n_y</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.sol"><code class="docutils literal notranslate"><span class="pre">HjbProblem.sol</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.q_opt"><code class="docutils literal notranslate"><span class="pre">HjbProblem.q_opt</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.x"><code class="docutils literal notranslate"><span class="pre">HjbProblem.x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.dofs"><code class="docutils literal notranslate"><span class="pre">HjbProblem.dofs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.t_d"><code class="docutils literal notranslate"><span class="pre">HjbProblem.t_d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.h_t"><code class="docutils literal notranslate"><span class="pre">HjbProblem.h_t</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.h_x"><code class="docutils literal notranslate"><span class="pre">HjbProblem.h_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hjb.HjbProblem.h_y"><code class="docutils literal notranslate"><span class="pre">HjbProblem.h_y</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/modules/generated/hjb.HjbProblem.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Institute of Numerical Mathematics, Ulm University.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
